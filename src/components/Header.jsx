@@ -1,4 +1,3 @@
-import { Children } from 'react'
 import style from './Header.module.css'
 
 export function Header({brand, description, children}) {
@@ -14,10 +13,10 @@ export function Header({brand, description, children}) {
 
             </div>
 
-            <nav className='{style.navigation}' aria-label='Navegação Principal'>
+            <nav className={style.navigation} aria-label='Navegação Principal'>
                 {children}
             </nav>
-            
+
         </header>
     )
 };
