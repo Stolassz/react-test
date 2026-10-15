@@ -1,9 +1,23 @@
+import { Children } from 'react'
 import style from './Header.module.css'
 
-export function Header () {
+export function Header({brand, description, children}) {
     return(
         <header className={style.header}>
-            <h1>Olá minorias.</h1>
+            <div className={style.brand}>
+                <span className={style.logo}>GT</span>
+                    <div>
+                        <strong>{brand}</strong>
+                        <span>{description}</span>
+
+                    </div>
+
+            </div>
+
+            <nav className='{style.navigation}' aria-label='Navegação Principal'>
+                {children}
+            </nav>
+            
         </header>
     )
 };
